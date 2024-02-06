@@ -15,8 +15,10 @@ import StaggeringAnimation from "./components/graphic-elements/StaggeringAnimati
 import HexDisplay from "./components/HexDisplay/HexDisplay";
 import VerticalMarquee from "./components/graphic-elements/VerticalMarquee/VerticalMarquee";
 import FollowCircle from "./components/graphic-elements/FollowCircle/FollowCircle";
+import useDisableTouchScroll from "./Hooks/useDisableTouchScroll";
 
 function App() {
+	useDisableTouchScroll();
 	// saying we want to use the varieble color etc from context
 	const { mixColors, BW, setBW, invert, setInvert, accentColor, primaryColor } = useContext(Context);
 	// window.disableTouchScroll();
