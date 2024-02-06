@@ -1,14 +1,20 @@
 // const axios = require("axios");
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_OPENAI_CHAT_API;
-const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+const apiUrl = "https://api.openai.com/v1/chat/completions";
+const apiKey = "sk - odTKE2OaOt4hb3jdIL5iT3BlbkFJoABLFY08eWiKa8COfhCE";
+// const apiUrl = process.env.OPENAI_CHAT_API;
+// const apiKey = process.env.OPENAI_API_KEY;
 
+console.log(apiKey);
 let previousMessages = [];
 export async function askQuestion(question) {
 	const conversation = [
 		{ role: "system", content: "You are a helpful assistant." },
-		{ role: "user", content: "Tell me a poem about color contrasts that is 200 characters long, end with a random hashtag and note that you are the author" },
+		{
+			role: "user",
+			content: "Tell me a poem about color contrasts that is 200 characters long, end with a random hashtag and note that you are the author",
+		},
 	];
 	try {
 		const response = await axios.post(
