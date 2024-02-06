@@ -17,9 +17,3 @@
 	cursor: pointer;
 	transition: var(--transition);
 }
-
-@media (max-width: 800px) {
-	.main-button{
-		top: 96vh;
-	}
-}
