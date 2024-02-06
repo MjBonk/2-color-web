@@ -6,8 +6,7 @@ export default function VerticalMarquee() {
   return (
     <div className="marquee">
       <Marquee direction="down">
-        <p>Complementary color combinations are the colors that sit on opposite sides of the color wheel &nbsp;</p>
-        <p>Complementary color combinations are the colors that sit on opposite sides of the color wheel &nbsp;</p>
+        <p>Complementary colors are the colors that sit on opposite sides of the color wheel &nbsp;</p>
       </Marquee>
     </div>
   );
