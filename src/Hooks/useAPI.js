@@ -1,8 +1,8 @@
 // const axios = require("axios");
 import axios from "axios";
 
-const apiUrl = process.env.OPENAI_CHAT_API;
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+const apiUrl = process.env.REACT_APP_OPENAI_CHAT_API;
 
 console.log(apiKey);
 let previousMessages = [];
