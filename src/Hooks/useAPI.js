@@ -1,10 +1,8 @@
 // const axios = require("axios");
 import axios from "axios";
 
-const apiUrl = "https://api.openai.com/v1/chat/completions";
-const apiKey = "sk - odTKE2OaOt4hb3jdIL5iT3BlbkFJoABLFY08eWiKa8COfhCE";
-// const apiUrl = process.env.OPENAI_CHAT_API;
-// const apiKey = process.env.OPENAI_API_KEY;
+const apiUrl = process.env.OPENAI_CHAT_API;
+const apiKey = process.env.OPENAI_API_KEY;
 
 console.log(apiKey);
 let previousMessages = [];

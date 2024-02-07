@@ -47,6 +47,8 @@ function ContextProvider({ children }) {
 	document.documentElement.style.setProperty("--clr-primary", primaryColor);
 	document.documentElement.style.setProperty("--clr-accent", accentColor);
 
+	
+
 	// here we put all the stuff if one varieble that we then pass as the value when returning the component,
 	// instead of making multible "Context.Provider"
 	const value = {

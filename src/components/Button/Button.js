@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../ContextProvider";
 import chroma from "chroma-js";
 import "./Button.css";
@@ -14,6 +14,8 @@ function Button() {
 			/* Cyclical section index is used when you want to
   cycle through a set of elements or sections in a loop.*/
 			const section = document.getElementById(`section${nextSection}`);
+
+
 			if (section) {
 				section.scrollIntoView({ behavior: "smooth" });
 				if (nextSection === 1) {
@@ -24,9 +26,11 @@ function Button() {
 						setMixColors({ one: "#000000", two: "#FFFFFF" });
 					}, 1000);
 					return nextSection;
+					
 				} else if (nextSection === 2) {
 					setButtonText("MIX");
 					header.style.top = `-${header.getBoundingClientRect().height}px`;
+					
 				} else if (nextSection === 3) {
 					setButtonText("RESTART");
 					header.style.top = "0px";
