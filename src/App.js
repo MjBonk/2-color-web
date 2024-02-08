@@ -24,9 +24,9 @@ function App() {
 	// window.disableTouchScroll();
 
 	// relod the page make the scroll go up
-	// useEffect(() => {
-	// 	window.scrollTo(0, 0);
-	// }, []);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<>

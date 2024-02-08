@@ -7,7 +7,6 @@ function Button() {
 	const [currentSection, setCurrentSection] = useState(1);
 	const { mixColors, setMixColors, setColor, resetToggles } = useContext(Context);
 
-
 	const handleOnClick = () => {
 		const header = document.querySelector(".header");
 		// Scroll to the next section
@@ -23,18 +22,16 @@ function Button() {
 				if (nextSection === 2) {
 					setButtonText("MIX");
 					header.style.top = `-${header.getBoundingClientRect().height}px`;
-
 				} else if (nextSection === 3) {
 					setButtonText("RESTART");
 					header.style.top = "0px";
 					setColor(chroma.mix(mixColors.one, mixColors.two).hex());
-
 				} else if (nextSection === 1) {
 					setButtonText("START");
-					setColor("#FFFFFF");
+					setColor("#ffffff");
 					resetToggles();
 					const timeoutId = setTimeout(() => {
-						setMixColors({ one: "#000000", two: "#FFFFFF" });
+						setMixColors({ one: "#000000", two: "#ffffff" });
 					}, 1000);
 				}
 				return nextSection;

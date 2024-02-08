@@ -7,7 +7,7 @@ function StaggeringAnimation(props) {
 		anime({
 			targets: ".staggeringAnimation .el",
 			scale: [
-				{ value: 0.1, easing: "easeOutSine", duration: 100 },
+				{ value: 0.7, easing: "easeOutSine", duration: 100 },
 				{ value: 1, easing: "easeInOutQuad", duration: 100 },
 			],
 			delay: anime.stagger(50, { grid: [10, 10], from: "center" }),
