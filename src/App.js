@@ -4,17 +4,17 @@ import { Context } from "./ContextProvider";
 //import the context we created
 
 import Button from "./components/Button/Button";
-import ColorBox from "./components/ColorBox/ColorBox";
+import ColorBox from "./components/section-2/ColorBox/ColorBox";
 import Header from "./components/Header/Header";
-import CircleText from "./components/graphic-elements/CircleText/CircleText";
-import TitleAiPoem from "./components/TitleAiPoem/TitleAiPoem";
-import PlusSign from "./components/graphic-elements/PlusSign/PlusSign";
-import Toggle from "./components/Toggle/Toggle";
-import Domino from "./components/graphic-elements/Domino/Domino";
-import StaggeringAnimation from "./components/graphic-elements/StaggeringAnimation/StaggeringAnimation";
-import HexDisplay from "./components/HexDisplay/HexDisplay";
-import VerticalMarquee from "./components/graphic-elements/VerticalMarquee/VerticalMarquee";
-import FollowCircle from "./components/graphic-elements/FollowCircle/FollowCircle";
+import CircleText from "./components/section-1/CircleText/CircleText";
+import TitleAiPoem from "./components/section-3/TitleAiPoem/TitleAiPoem";
+import PlusSign from "./components/section-2/PlusSign/PlusSign";
+import Toggle from "./components/section-3/Toggle/Toggle";
+import Domino from "./components/section-3/Domino/Domino";
+import StaggeringAnimation from "./components/section-3/StaggeringAnimation/StaggeringAnimation";
+import HexDisplay from "./components/section-3/HexDisplay/HexDisplay";
+import VerticalMarquee from "./components/section-3/VerticalMarquee/VerticalMarquee";
+import FollowCircle from "./components/section-3/FollowCircle/FollowCircle";
 import useDisableTouchScroll from "./Hooks/useDisableTouchScroll";
 
 function App() {
@@ -23,15 +23,11 @@ function App() {
 	const { mixColors, BW, setBW, invert, setInvert, accentColor, primaryColor } = useContext(Context);
 	// window.disableTouchScroll();
 
-	document.documentElement.style.setProperty("--clr-accent", accentColor);
-	document.documentElement.style.setProperty("--clr-primary", primaryColor);
+	// relod the page make the scroll go up
+	// useEffect(() => {
+	// 	window.scrollTo(0, 0);
+	// }, []);
 
-	//relod the page make the scroll go up
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
-	
 	return (
 		<>
 			<Header />
@@ -40,22 +36,21 @@ function App() {
 				{/* _________________________________SECTION_1____________________________________________ */}
 				<section id="section1" className="section1">
 					<div className="section1__text-wrapper">
-						<h1 className="section1__main-title">COLOR ME TWICE</h1>
+						<h1 className="section1__main-title">2 COLOR WEB</h1>
 						<p>
-							Color Me Twice has been designed to assist you in creating an 2
-							color palette for your upcoming web development project. By
-							selecting two colors, Color Me Twice will provide you based on
-							your choice of colors, a primary color and its accompanying
-							accent shade, resulting in a visually cohesive two-color
-							composition.
+							Introducing 2 Color Web – your go-to destination for crafting
+							stunning two-color palettes. Simply choose two colors, and we'll
+							unveil a primary hue along with its perfect contrasting accent
+							shade. <br /> Say hello to the fun side of web color exploration
+							with 2 Color Web!
 							<br />
 							<br />
 							<span>
-								<b>How you do it, it's easy as 1, 2, 3.</b>
+								<b>How you do it, it's as easy as 1, 2, 3.</b>
 								<br />
 								<b>1:</b> Press start
-								<br /> <b>2:</b> Choose your colors
-								<br /> <b>3:</b> Press mix and see the result
+								<br /> <b>2:</b> Choose 2 colors to mix
+								<br /> <b>3:</b> Press mix and enjoy the result
 							</span>
 						</p>
 					</div>
@@ -79,10 +74,10 @@ function App() {
 						<Toggle value={invert} setValue={setInvert} text={"SWITCH"} />
 					</div>
 					<div className="phone-domino">
-						<Domino />
+						<Domino bricks={13} className={"phone-domino"} />
 					</div>
 					<TitleAiPoem />
-					<StaggeringAnimation />
+					<StaggeringAnimation squares={50} />
 					<FollowCircle />
 				</section>
 			</main>

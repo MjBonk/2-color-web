@@ -15,21 +15,25 @@ const calculateComplementaryColor = (hexColor) => {
 	return complementaryHex;
 };
 
+// here we create our variebles/function etc that we want acces to everywhere
 function ContextProvider({ children }) {
-	// here we create our variebles/function etc that we want acces to everywhere
+	
+	
+	
+	const [color, setColor] = useState("#FFFFFF");
 	const [mixColors, setMixColors] = useState({
 		one: "#000000",
 		two: "#FFFFFF",
 	});
-
-	const [color, setColor] = useState("#FFFFFF");
-
+	
+	
 	// state of toggles
 	const [BW, setBW] = useState(false);
 	const [invert, setInvert] = useState(false);
 
 	let primaryColor = color;
 
+	
 	if (BW === true) {
 		primaryColor = "#FFFFFF";
 	}
@@ -37,16 +41,17 @@ function ContextProvider({ children }) {
 		primaryColor = calculateComplementaryColor(primaryColor);
 	}
 
-	const accentColor = calculateComplementaryColor(primaryColor);
-
 	function resetToggles() {
 		setBW(false);
 		setInvert(false);
 	}
-	
+
+	const accentColor = calculateComplementaryColor(primaryColor);
 	document.documentElement.style.setProperty("--clr-primary", primaryColor);
 	document.documentElement.style.setProperty("--clr-accent", accentColor);
-
+	
+	
+	
 	
 
 	// here we put all the stuff if one varieble that we then pass as the value when returning the component,

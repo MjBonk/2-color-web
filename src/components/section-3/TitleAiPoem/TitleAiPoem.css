@@ -1,18 +1,19 @@
 .title-textAI {
+	margin: 2em 1em;
 	grid-area: 2 / 5 / 7 / 9;
-	border-left: solid 5px;
 	border-color: var(--clr-accent);
 	transition: var(--transition);
-	padding: 0 .5rem;
+	position: relative;
+	padding: .5em;
 }
 
 .title-textAI>h1 {
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 }
 
 @media (max-width: 1400px) {
 	.title-textAI>h1 {
-		font-size: 2rem;
+		font-size: 1.9rem;
 	}
 }
 
@@ -22,7 +23,7 @@
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	.title-textAI {
 		display: none;
 	}

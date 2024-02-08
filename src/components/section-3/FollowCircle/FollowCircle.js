@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./Circle.css";
+import "./Circle.css"
 import { useRef } from "react";
 import { useFollowPointer } from "./UseFollowPointer.js";
 

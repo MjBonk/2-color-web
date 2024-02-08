@@ -39,7 +39,7 @@ section {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	.section1__main-title {
 		width: 100%;
 	}
@@ -54,7 +54,7 @@ section {
 	position: relative;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	.section2 {
 		flex-direction: column;
 	}
@@ -68,10 +68,11 @@ section {
 	background-color: var(--clr-primary);
 	position: relative;
 	display: grid;
-	grid-template-columns: 50px repeat(3, 1fr) repeat(4, .7fr) repeat(3, 1fr) 50px;
+	grid-template-columns: 40px repeat(3, 1fr) repeat(4, .7fr) repeat(3, 1fr) 40px;
 	grid-template-rows: repeat(12, 1fr);
 	gap: 1rem;
-	padding: 3rem 1rem 2rem 1rem;
+	padding: 1.5rem 1rem;
+	overflow: hidden;
 }
 
 
@@ -81,7 +82,7 @@ section {
 	height: 100%;
 	width: 100%;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: center;
 	padding: 0 1rem;
 }
 
@@ -102,7 +103,7 @@ section {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	.section3 {
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows: repeat(9, 1fr) 40px 1fr;
@@ -125,7 +126,7 @@ section {
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
 	.phone-domino {
 		display: none;
 	}

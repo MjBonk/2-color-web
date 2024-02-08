@@ -1,4 +1,3 @@
-import { IoIosColorPalette } from "react-icons/io";
 import { TbDroplet } from "react-icons/tb";
 import { TbDropletFilled } from "react-icons/tb";
 import "./Header.css";
@@ -19,7 +18,7 @@ function Header() {
                 <TbDroplet className="logo" />
                 <TbDropletFilled className="logo" />
             </motion.div>
-            <p>COLOR ME TWICE</p>
+            <p>2 COLOR WEB</p>
         </header>
     );
 }

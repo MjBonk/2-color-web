@@ -1,3 +1,5 @@
+
+/* _______________INCOMMON_STYLING_______________ */
 .primary-hex-display,
 .accent-hex-display {
 	padding: 1rem;
@@ -8,7 +10,8 @@
 
 .accent-hex-display>h1,
 .primary-hex-display>h1 {
-	font-size: 3rem;
+	font-size: 4rem;
+	font-family: Montserrat;
 }
 
 .accent-hex-display>p,
@@ -23,10 +26,9 @@
 	margin-bottom: 1rem;
 }
 
-.hex-text {
-	font-size: 4rem;
-}
 
+
+/* _______________DIFFERENT_STYLING_______________ */
 .primary-hex-display {
 	border: solid var(--clr-accent) var(--size-border);
 	grid-area: 2 / 9 / 13 / 12;
@@ -36,7 +38,6 @@
 	background-color: var(--clr-accent);
 	grid-area: 2 / 2 / 13 / 5;
 }
-
 
 .accent-hex-display>h1,
 .accent-hex-display>p {
@@ -48,14 +49,14 @@
 	color: var(--clr-accent);
 }
 
+
+
+/* _______________MEDIA_QUERIES_______________ */
 @media (max-width: 1400px) {
-	.title-textAI>h1 {
-		font-size: 2rem;
-	}
 
 	.accent-hex-display>h1,
 	.primary-hex-display>h1 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 	}
 
 	.accent-hex-display>p,
@@ -65,43 +66,54 @@
 
 }
 
+
 @media (max-width: 1100px) {
 
 	.accent-hex-display>h1,
 	.primary-hex-display>h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
-
+	
 	.accent-hex-display>p,
 	.primary-hex-display>p {
 		font-size: .9rem;
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	.primary-hex-display {
 		grid-area: 1 / 1 / 5 / 6;
 	}
-
+	
 	.accent-hex-display {
 		grid-area: 6 / 1 / 10 / 6;
 	}
-
+	
+	
 	.hex-domino {
 		display: none;
 	}
-
+	
+	.accent-hex-display>h1,
+	.primary-hex-display>h1 {
+		font-size: 3.7rem;
+	}
+	
 	.accent-hex-display>p,
 	.primary-hex-display>p {
-		font-size: 1rem;
+		font-size: 1.4rem;
 	}
+}
 
-	.hex-text {
-		font-size: 2rem;
-	}
+@media (max-width: 700px) {
 
 	.accent-hex-display>h1,
 	.primary-hex-display>h1 {
-		font-size: 3rem;
+		font-size: 3.3rem;
+	}
+	
+	.accent-hex-display>p,
+	.primary-hex-display>p {
+		font-size: 1.1rem;
 	}
 }

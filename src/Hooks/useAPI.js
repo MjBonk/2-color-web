@@ -4,14 +4,13 @@ import axios from "axios";
 const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
 const apiUrl = process.env.REACT_APP_OPENAI_CHAT_API;
 
-console.log(apiKey);
 let previousMessages = [];
 export async function askQuestion(question) {
 	const conversation = [
 		{ role: "system", content: "You are a helpful assistant." },
 		{
 			role: "user",
-			content: "Tell me a poem about color contrasts that is 200 characters long, end with a random hashtag and note that you are the author",
+			content: question,
 		},
 	];
 	try {

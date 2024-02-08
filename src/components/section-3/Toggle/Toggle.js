@@ -1,7 +1,7 @@
 import { useContext } from "react";
 // npm install react-switch
 import Switch from "react-switch";
-import { Context } from "../../ContextProvider";
+import { Context } from "../../../ContextProvider";
 
 export default function Toggle(props) {
 	const { accentColor, primaryColor } = useContext(Context);

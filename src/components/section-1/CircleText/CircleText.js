@@ -21,7 +21,7 @@ function CircleText() {
 					style={{
 						fontFamily: "var(--ff-rubic)",
 						fill: "var(--clr-accent)",
-						transition: "fill 1s ease-in-out 1s",
+						transition: "fill .5s ease-in-out 1s",
 					}}
 				>
 					<textPath href="#circlePath">
