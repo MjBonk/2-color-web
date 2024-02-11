@@ -1,11 +1,16 @@
 //npm install animejs --save
 import anime from "animejs";
-import "./StaggeringAnimation.css";
+import chroma from "chroma-js";
+import "./OpacityDisplay.css";
+import { Context } from "../../../ContextProvider";
+import { useContext } from "react";
 
-function StaggeringAnimation(props) {
+function OpacityDisplay(props) {
+	const { primaryColor, accentColor } = useContext(Context);
+
 	function handleMouseEnter() {
 		anime({
-			targets: ".staggeringAnimation .el",
+			targets: ".opacity-display .el",
 			scale: [
 				{ value: 0.7, easing: "easeOutSine", duration: 100 },
 				{ value: 1, easing: "easeInOutQuad", duration: 100 },
@@ -14,11 +19,11 @@ function StaggeringAnimation(props) {
 		});
 		return anime;
 	}
-
+	
 	const squares = Math.round(props.squares / 4);
 	const testarr = [];
 	const opacity = ["10", "25", "45", "75", "100"];
-
+	
 	for (let i = 0; i < opacity.length; i++) {
 		for (let j = 0; j < squares; j++) {
 			testarr.push(`small square el squareOp-${opacity[i]}`);
@@ -26,7 +31,7 @@ function StaggeringAnimation(props) {
 	}
 
 	return (
-		<div className="staggeringAnimation" onMouseEnter={handleMouseEnter}>
+		<div className="opacity-display" onMouseEnter={handleMouseEnter}>
 			{testarr.map((test, index) => (
 				<div key={index} className={test}></div>
 			))}
@@ -34,4 +39,4 @@ function StaggeringAnimation(props) {
 	);
 }
 
-export default StaggeringAnimation;
+export default OpacityDisplay;

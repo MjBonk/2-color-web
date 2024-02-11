@@ -1,21 +1,23 @@
 import "./App.css";
 import { useContext, useEffect } from "react";
 import { Context } from "./ContextProvider";
-//import the context we created
+import useDisableTouchScroll from "./Hooks/useDisableTouchScroll";
 
 import Button from "./components/Button/Button";
-import ColorBox from "./components/section-2/ColorBox/ColorBox";
 import Header from "./components/Header/Header";
+// section1/2
 import CircleText from "./components/section-1/CircleText/CircleText";
-import TitleAiPoem from "./components/section-3/TitleAiPoem/TitleAiPoem";
+import ColorBox from "./components/section-2/ColorBox/ColorBox";
 import PlusSign from "./components/section-2/PlusSign/PlusSign";
+// section 3
+import TitleAiPoem from "./components/section-3/TitleAiPoem/TitleAiPoem";
 import Toggle from "./components/section-3/Toggle/Toggle";
 import Domino from "./components/section-3/Domino/Domino";
-import StaggeringAnimation from "./components/section-3/StaggeringAnimation/StaggeringAnimation";
+import OpacityDisplay from "./components/section-3/OpacityDisplay/OpacityDisplay";
 import HexDisplay from "./components/section-3/HexDisplay/HexDisplay";
 import VerticalMarquee from "./components/section-3/VerticalMarquee/VerticalMarquee";
 import FollowCircle from "./components/section-3/FollowCircle/FollowCircle";
-import useDisableTouchScroll from "./Hooks/useDisableTouchScroll";
+
 
 function App() {
 	useDisableTouchScroll();
@@ -74,10 +76,10 @@ function App() {
 						<Toggle value={invert} setValue={setInvert} text={"SWITCH"} />
 					</div>
 					<div className="phone-domino">
-						<Domino bricks={13} className={"phone-domino"} />
+						<Domino bricks={13} className={"phone-domino__brick"} />
 					</div>
 					<TitleAiPoem />
-					<StaggeringAnimation squares={50} />
+					<OpacityDisplay squares={50} />
 					<FollowCircle />
 				</section>
 			</main>
