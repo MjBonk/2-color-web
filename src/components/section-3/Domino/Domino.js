@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "./Domino.css";
+import styles from "./Domino.module.css";
 
 function Domino(props) {
 	const dominos = Array(props.bricks).fill(" ");
@@ -41,14 +40,14 @@ function Domino(props) {
 	}
 
 	return (
-		<div className={`domino-box`} onMouseEnter={handleMouseEnter}>
+		<div className={styles.wrapper} onMouseEnter={handleMouseEnter}>
 			{dominos.map((domino, index) => {
 				return (
 					<div
 						style={{
 							backgroundColor: props.backgroundColor,
 						}}
-						className={`domino-brick ${props.className}`}
+						className={`${styles.brick} ${props.className}`}
 						key={index}
 					></div>
 				);

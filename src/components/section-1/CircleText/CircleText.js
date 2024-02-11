@@ -1,13 +1,11 @@
-import "./CircleText.css";
+import styles from "./CircleText.module.css";
 
 function CircleText() {
-	//"Razzle Dazzle Camouflage: Where Contrasts Meets Invisibility!"
 	return (
-		<div className="wrapper">
-			{/* <img className="img" src="./razzle dazzle.webp"></img> */}
-			<svg className="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+		<div className={styles.wrapper}>
+			<svg className={styles.svg} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 				<path
-					className="svg__circle"
+					className={styles.svg__circle}
 					id="circlePath"
 					d="
       M 10, 50

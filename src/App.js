@@ -31,10 +31,10 @@ function App() {
 	}, []);
 
 	return (
-		<>
+		<main>
 			<Header />
 			<Button />
-			<main>
+			<body>
 				{/* _________________________________SECTION_1____________________________________________ */}
 				<section id="section1" className="section1">
 					<div className="section1__text-wrapper">
@@ -69,8 +69,8 @@ function App() {
 				{/* _________________________________SECTION_3____________________________________________ */}
 				<section id="section3" className="section3">
 					<VerticalMarquee />
-					<HexDisplay className={"primary-hex-display"} />
-					<HexDisplay className={"accent-hex-display"} />
+					<HexDisplay hexDisplay={"primary"} />
+					<HexDisplay hexDisplay={"accent"} />
 					<div className="toggles">
 						<Toggle value={BW} setValue={setBW} text={"B / W"} />
 						<Toggle value={invert} setValue={setInvert} text={"SWITCH"} />
@@ -82,8 +82,8 @@ function App() {
 					<OpacityDisplay squares={50} />
 					<FollowCircle />
 				</section>
-			</main>
-		</>
+			</body>
+		</main>
 	);
 }
 

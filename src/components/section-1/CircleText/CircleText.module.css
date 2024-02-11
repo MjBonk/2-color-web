@@ -9,7 +9,6 @@
 }
 
 .svg {
-	position: absolute;
 	animation: spin 30s infinite ease-in-out;
 }
 .wrapper:hover .svg{

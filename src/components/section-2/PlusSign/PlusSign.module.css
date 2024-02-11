@@ -18,7 +18,7 @@
 .y {
 	transition: none;
 	height: 100%;
-	width: 15%;
+	width: calc(var(--plus-thickness)/2);
 }
 
 .x {
@@ -26,7 +26,7 @@
 	content: '';
 	display: block;
 	width: 40%;
-	height: 30%;
+	height: var(--plus-thickness);
 	margin: 0 -5%;
 }
 

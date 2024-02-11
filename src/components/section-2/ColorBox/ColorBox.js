@@ -1,4 +1,4 @@
-import "./ColorBox.css";
+import styles from "./ColorBox.module.css";
 import { useContext, useState } from "react";
 import { Context } from "../../../ContextProvider";
 import Colorful from "@uiw/react-color-colorful";
@@ -15,7 +15,7 @@ function ColorBox(props) {
 
 	const [hsva, setHsva] = useState({ h: 0, s: 0, v: 68, a: 1 });
 	return (
-		<div className="color-box" style={{ backgroundColor: props.color }}>
+		<div className={styles.container} style={{ backgroundColor: props.color }}>
 			<Colorful color={hsva} disableAlpha={true} onChange={handleOnChange}/>
 		</div>
 	);

@@ -14,7 +14,8 @@
 
   --transition: background-color .5s ease-in-out 1s, color .5s ease-in-out 1s, border-color .5s ease-in-out 1s;
   /* transition: var(--transition) */
-  --mq-sm: 480px
+  --mq-sm: 480px;
+  --plus-thickness: 35%;
 }
 
 

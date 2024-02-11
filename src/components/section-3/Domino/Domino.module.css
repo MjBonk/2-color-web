@@ -1,4 +1,4 @@
-.domino-box {
+.wrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -7,7 +7,7 @@
 	height: 100%;
 }
 
-.domino-brick {
+.brick {
 	background-color: var(--clr-accent);
 	width: 4%;
 	height: 80%;

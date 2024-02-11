@@ -1,4 +1,4 @@
-.title-textAI {
+.wrapper {
 	margin: 2em 1em;
 	grid-area: 2 / 5 / 7 / 9;
 	border-color: var(--clr-accent);
@@ -7,24 +7,24 @@
 	padding: .5em;
 }
 
-.title-textAI>h1 {
+.title {
 	font-size: 2.2rem;
 }
 
 @media (max-width: 1400px) {
-	.title-textAI>h1 {
+	.title {
 		font-size: 1.9rem;
 	}
 }
 
 @media (max-width: 1200px) {
-	.title-textAI>h1 {
+	.title {
 		font-size: 1.5rem;
 	}
 }
 
 @media (max-width: 1000px) {
-	.title-textAI {
+	.wrapper {
 		display: none;
 	}
 }

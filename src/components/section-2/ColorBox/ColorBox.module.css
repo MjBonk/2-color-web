@@ -1,8 +1,7 @@
-.color-box {
-	flex:1;
+.container {
+	flex: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: none;
 }
-

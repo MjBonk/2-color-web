@@ -1,13 +1,8 @@
 //npm install animejs --save
 import anime from "animejs";
-import chroma from "chroma-js";
 import "./OpacityDisplay.css";
-import { Context } from "../../../ContextProvider";
-import { useContext } from "react";
 
 function OpacityDisplay(props) {
-	const { primaryColor, accentColor } = useContext(Context);
-
 	function handleMouseEnter() {
 		anime({
 			targets: ".opacity-display .el",

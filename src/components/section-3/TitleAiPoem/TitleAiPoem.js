@@ -1,6 +1,6 @@
-import { askQuestion, assistantReply } from "../../../Hooks/useAPI";
+import { askQuestion } from "../../../Hooks/useAPI";
 import { useEffect, useState } from "react";
-import "./TitleAiPoem.css";
+import styles from "./TitleAiPoem.module.css";
 
 function TitleAiPoem() {
 	const [assistantResponse, setAssistantResponse] = useState(true);
@@ -17,14 +17,16 @@ function TitleAiPoem() {
 			});
 	}, []);
 	return (
-		<div className="title-textAI">
-			<h1>CONTRASTS</h1>
+		<article className={styles.wrapper}>
+			<h1 className={styles.title} e>
+				CONTRASTS
+			</h1>
 			<p>
 				{assistantResponse?.length
 					? assistantResponse
 					: "In vibrant hues, contrasts thrive, Colors dancing, so alive. Dark and light, they intertwine, Creating beauty so divine. Opposites attract, it's true, In red and green, or yellow-blue. Harmony in differences we find, A kaleidoscope for eyes, designed. #ColorContrastDelight #AIAssistant #NoEmojis"}
 			</p>
-		</div>
+		</article>
 		// <h1>{assistantResponse || 'Loading...'}</h1>
 		// Or you can use like this
 	);
