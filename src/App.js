@@ -24,7 +24,9 @@ function App() {
 	
 	//disable scrolling on phone and scroll 1px for safari to hide searchbar
 	useDisableTouchScroll();
-	window.scrollTo(0,1);
+	setTimeout(() => {
+		window.scrollTo(0,1);
+	}, 1000);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
