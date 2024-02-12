@@ -5,3 +5,17 @@
 	justify-content: center;
 	transition: none;
 }
+
+.picker1,
+.picker2 {
+	margin-top: var(--move-up);
+}
+
+@media (max-width: 800px) {
+	.picker1 {
+		margin-top: 3em;
+	}
+	.picker2 {
+		margin-bottom: 3em;
+	}
+}

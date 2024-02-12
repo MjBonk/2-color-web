@@ -1,6 +1,6 @@
 .plus {
-	width: 9vw;
-	height: 9vw;
+	width: 10vw;
+	height: 10vw;
 	position: absolute;
 
 
@@ -31,12 +31,13 @@
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
 	.plus {
 		transform-origin: center center;
 		transform: translate(-50%, -50%) rotate(0deg);
 		width: 5vw;
 		height: 5vw;
+		margin-top: -1em;
 	}
 }
 

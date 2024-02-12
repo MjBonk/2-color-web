@@ -20,30 +20,35 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	padding: 1rem;
+	padding: 1em;
 	gap: 3rem;
 	overflow: hidden;
 }
 
 .section1__text-wrapper {
+	margin-top: var(--move-up);
 	max-width: 42rem;
 }
 
 .section1__main-title {
-	width: 10rem;
+	width: 100%;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (max-width: 550px) {
 	.section1__main-title {
-		width: 100vw;
+		width: 5em;
 	}
+
 }
 
-@media (max-width: 1000px) {
-	.section1__main-title {
-		width: 100%;
+@media screen and (max-width: 1000px) {
+	.section1__text-wrapper {
+		margin-top: -6em;
 	}
+
 }
+
+
 
 
 
@@ -54,7 +59,7 @@ section {
 	position: relative;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
 	.section2 {
 		flex-direction: column;
 	}

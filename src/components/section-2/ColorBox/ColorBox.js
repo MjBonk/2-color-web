@@ -16,7 +16,7 @@ function ColorBox(props) {
 	const [hsva, setHsva] = useState({ h: 0, s: 0, v: 68, a: 1 });
 	return (
 		<div className={styles.container} style={{ backgroundColor: props.color }}>
-			<Colorful color={hsva} disableAlpha={true} onChange={handleOnChange}/>
+			<Colorful color={hsva} disableAlpha={true} onChange={handleOnChange} className={props.color === mixColors.one ? styles.picker1 : styles.picker2}/>
 		</div>
 	);
 }
