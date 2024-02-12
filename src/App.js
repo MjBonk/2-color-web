@@ -20,12 +20,12 @@ import FollowCircle from "./components/section-3/FollowCircle/FollowCircle";
 import Cursor from "./components/Cursor/CursorCopy";
 
 function App() {
-	useDisableTouchScroll();
-	// saying we want to use the varieble color etc from context
 	const { mixColors, BW, setBW, invert, setInvert} = useContext(Context);
-	// window.disableTouchScroll();
+	
+	//disable scrolling on phone and scroll 1px for safari to hide searchbar
+	useDisableTouchScroll();
+	window.scrollTo(0,1);
 
-	// relod the page make the scroll go up
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
