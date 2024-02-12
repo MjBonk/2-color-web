@@ -1,16 +1,22 @@
 import styles from "./HexDisplay.module.css";
-import { useContext, useRef } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../../../ContextProvider";
 import Domino from "../Domino/Domino";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 function HexDisplay(props) {
-	const { primaryColor, accentColor } = useContext(Context);
+	const { primaryColor, accentColor, onCopyHandler } = useContext(Context);
 	const leftCurl = "{";
 	const rightCurl = "}";
 
 	return (
 		<div className={`${styles.containers} ${styles[props.hexDisplay]}`}>
-			<h1>{props.hexDisplay === "primary" ? primaryColor : accentColor}</h1>
+			<CopyToClipboard
+				text={props.hexDisplay === "primary" ? primaryColor : accentColor}
+				onCopy={onCopyHandler}
+			>
+				<h1>{props.hexDisplay === "primary" ? primaryColor : accentColor}</h1>
+			</CopyToClipboard>
 			<div className={styles.containers__domino}>
 				<Domino
 					bricks={13}

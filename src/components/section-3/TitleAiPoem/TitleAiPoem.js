@@ -24,7 +24,7 @@ function TitleAiPoem() {
 			<p>
 				{assistantResponse?.length
 					? assistantResponse
-					: "In vibrant hues, contrasts thrive, Colors dancing, so alive. Dark and light, they intertwine, Creating beauty so divine. Opposites attract, it's true, In red and green, or yellow-blue. Harmony in differences we find, A kaleidoscope for eyes, designed. #ColorContrastDelight #AIAssistant #NoEmojis"}
+					: "Opposites attract, it's true, In red and green, or yellow-blue. Hues collide, harmonize with might, Creating art, both bold and bright. #ContrastChronicles - AI Assistant. #ColorContrastDelight #AIAssistant #NoEmojis"}
 			</p>
 		</article>
 		// <h1>{assistantResponse || 'Loading...'}</h1>

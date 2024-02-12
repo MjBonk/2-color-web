@@ -9,6 +9,7 @@
 .containers>h1 {
 	font-size: 4rem;
 	font-family: Montserrat;
+	cursor: pointer;
 }
 
 .containers>p {

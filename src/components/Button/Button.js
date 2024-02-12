@@ -30,7 +30,7 @@ function Button() {
 					setButtonText("START");
 					setColor("#ffffff");
 					resetToggles();
-					const timeoutId = setTimeout(() => {
+					setTimeout(() => {
 						setMixColors({ one: "#000000", two: "#ffffff" });
 					}, 1000);
 				}

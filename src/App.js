@@ -17,11 +17,12 @@ import OpacityDisplay from "./components/section-3/OpacityDisplay/OpacityDisplay
 import HexDisplay from "./components/section-3/HexDisplay/HexDisplay";
 import VerticalMarquee from "./components/section-3/VerticalMarquee/VerticalMarquee";
 import FollowCircle from "./components/section-3/FollowCircle/FollowCircle";
+import Cursor from "./components/Cursor/CursorCopy";
 
 function App() {
 	useDisableTouchScroll();
 	// saying we want to use the varieble color etc from context
-	const { mixColors, BW, setBW, invert, setInvert, accentColor, primaryColor } = useContext(Context);
+	const { mixColors, BW, setBW, invert, setInvert} = useContext(Context);
 	// window.disableTouchScroll();
 
 	// relod the page make the scroll go up
@@ -33,6 +34,7 @@ function App() {
 		<main>
 			<Header />
 			<Button />
+			<Cursor />
 			{/* _________________________________SECTION_1____________________________________________ */}
 			<section id="section1" className="section1">
 				<div className="section1__text-wrapper">

@@ -46,6 +46,12 @@ function ContextProvider({ children }) {
 	document.documentElement.style.setProperty("--clr-primary", primaryColor);
 	document.documentElement.style.setProperty("--clr-accent", accentColor);
 
+
+	const [isCopied, setIsCopied] = useState(false);
+	const onCopyHandler = () => {
+		setIsCopied(true);
+		setTimeout(() => setIsCopied(false), 2500); // Hide the success message after 2.5 seconds
+	};
 	// here we put all the stuff if one varieble that we then pass as the value when returning the component,
 	// instead of making multible "Context.Provider"
 	const value = {
@@ -55,11 +61,16 @@ function ContextProvider({ children }) {
 		setColor,
 		primaryColor,
 		accentColor,
+		
 		BW,
 		setBW,
 		invert,
 		setInvert,
 		resetToggles,
+
+		isCopied,
+		setIsCopied,
+		onCopyHandler,
 	};
 
 	return <Context.Provider value={value}>{children}</Context.Provider>;

@@ -19,7 +19,7 @@
 
 .hex__p {
 	color: var(--clr-accent);
-	font-weight: 600;
+	font-family: RR;
 	transform-origin: top left;
 	transform: rotate(90deg);
 	display: flex;
@@ -30,6 +30,7 @@
 	margin-left: 1.7em;
 	transition: opacity .1s linear ;
 	opacity: 0;
+	cursor: pointer;
 }
 
 .hex__p:hover {
