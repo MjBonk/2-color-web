@@ -20,13 +20,18 @@ import FollowCircle from "./components/section-3/FollowCircle/FollowCircle";
 import Cursor from "./components/Cursor/CursorCopy";
 
 function App() {
-	const { mixColors, BW, setBW, invert, setInvert} = useContext(Context);
-	
+	const { mixColors, BW, setBW, invert, setInvert } = useContext(Context);
 	//disable scrolling on phone and scroll 1px for safari to hide searchbar
 	useDisableTouchScroll();
-	setTimeout(() => {
-		window.scrollTo(0,1);
-	}, 1000);
+	//For iPhone and Andriod To remove Address bar when viewing website on Safari Mobile
+	if (Browser.Platform.ios || (Browser.Platform.android && Browser.safari)) {
+		window.addEventListener("load", function () {
+			setTimeout(function () {
+				// Safari hides the address bar when scrollling!
+				window.scrollTo(0, 1);
+			}, 100);
+		});
+	}
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
