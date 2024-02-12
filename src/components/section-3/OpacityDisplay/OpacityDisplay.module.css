@@ -1,0 +1,45 @@
+.grid {
+	grid-area: 2 / 12 / 13 / 13;
+	display: grid;
+	margin-left: .5rem;
+	position: relative;
+}
+
+.square {
+	transition: var(--transition);
+}
+
+.hex {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: grid;
+}
+
+
+.hex__p {
+	color: var(--clr-accent);
+	font-weight: 600;
+	transform-origin: top left;
+	transform: rotate(90deg);
+	display: flex;
+	align-items: center;
+	z-index: 4;
+	padding: 0 .5em ;
+	height: 1.7em;
+	margin-left: 1.7em;
+	transition: opacity .1s linear ;
+	opacity: 0;
+}
+
+.hex__p:hover {
+	opacity: 1;
+}
+
+@media (max-width: 1000px) {
+
+	.grid,
+	.hex {
+		display: none;
+	}
+}

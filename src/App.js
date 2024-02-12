@@ -18,7 +18,6 @@ import HexDisplay from "./components/section-3/HexDisplay/HexDisplay";
 import VerticalMarquee from "./components/section-3/VerticalMarquee/VerticalMarquee";
 import FollowCircle from "./components/section-3/FollowCircle/FollowCircle";
 
-
 function App() {
 	useDisableTouchScroll();
 	// saying we want to use the varieble color etc from context
@@ -34,55 +33,52 @@ function App() {
 		<main>
 			<Header />
 			<Button />
-			<body>
-				{/* _________________________________SECTION_1____________________________________________ */}
-				<section id="section1" className="section1">
-					<div className="section1__text-wrapper">
-						<h1 className="section1__main-title">2 COLOR WEB</h1>
-						<p>
-							Introducing 2 Color Web – your go-to destination for crafting
-							stunning two-color palettes. Simply choose two colors, and we'll
-							unveil a primary hue along with its perfect contrasting accent
-							shade. <br /> Say hello to the fun side of web color exploration
-							with 2 Color Web!
+			{/* _________________________________SECTION_1____________________________________________ */}
+			<section id="section1" className="section1">
+				<div className="section1__text-wrapper">
+					<h1 className="section1__main-title">2 COLOR WEB</h1>
+					<p>
+						Introducing 2 Color Web – your go-to destination for crafting stunning
+						two-color palettes. Simply choose two colors, and we'll unveil a primary
+						hue along with its perfect contrasting accent shade. <br /> Say hello to
+						the fun side of web color exploration with 2 Color Web!
+						<br />
+						<br />
+						<span>
+							<b>How you do it, it's as easy as 1, 2, 3.</b>
 							<br />
-							<br />
-							<span>
-								<b>How you do it, it's as easy as 1, 2, 3.</b>
-								<br />
-								<b>1:</b> Press start
-								<br /> <b>2:</b> Choose 2 colors to mix
-								<br /> <b>3:</b> Press mix and enjoy the result
-							</span>
-						</p>
-					</div>
-					<CircleText />
-				</section>
+							<b>1:</b> Press start
+							<br /> <b>2:</b> Choose 2 colors to mix
+							<br /> <b>3:</b> Press mix and enjoy the result
+						</span>
+					</p>
+				</div>
+				<CircleText />
+			</section>
 
-				{/* _________________________________SECTION_2____________________________________________ */}
-				<section id="section2" className="section2">
-					<ColorBox color={mixColors.one} />
-					<PlusSign />
-					<ColorBox color={mixColors.two} />
-				</section>
+			{/* _________________________________SECTION_2____________________________________________ */}
+			<section id="section2" className="section2">
+				<ColorBox color={mixColors.one} />
+				<PlusSign />
+				<ColorBox color={mixColors.two} />
+			</section>
 
-				{/* _________________________________SECTION_3____________________________________________ */}
-				<section id="section3" className="section3">
-					<VerticalMarquee />
-					<HexDisplay hexDisplay={"primary"} />
-					<HexDisplay hexDisplay={"accent"} />
-					<div className="toggles">
-						<Toggle value={BW} setValue={setBW} text={"B / W"} />
-						<Toggle value={invert} setValue={setInvert} text={"SWITCH"} />
-					</div>
-					<div className="phone-domino">
-						<Domino bricks={13} className={"phone-domino__brick"} />
-					</div>
-					<TitleAiPoem />
-					<OpacityDisplay squares={50} />
-					<FollowCircle />
-				</section>
-			</body>
+			{/* _________________________________SECTION_3____________________________________________ */}
+			<section id="section3" className="section3">
+				<VerticalMarquee />
+				<HexDisplay hexDisplay={"primary"} />
+				<HexDisplay hexDisplay={"accent"} />
+				<div className="toggles">
+					<Toggle value={BW} setValue={setBW} text={"B / W"} />
+					<Toggle value={invert} setValue={setInvert} text={"SWITCH"} />
+				</div>
+				<div className="phone-domino">
+					<Domino bricks={13} className={"phone-domino__brick"} />
+				</div>
+				<TitleAiPoem />
+				<OpacityDisplay squares={60} colors={5} />
+				<FollowCircle />
+			</section>
 		</main>
 	);
 }

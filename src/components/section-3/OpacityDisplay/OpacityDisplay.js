@@ -1,35 +1,51 @@
 //npm install animejs --save
 import anime from "animejs";
-import "./OpacityDisplay.css";
+import styles from "./OpacityDisplay.module.css";
+import { Context } from "../../../ContextProvider";
+import { useContext } from "react";
+import chroma from "chroma-js";
 
 function OpacityDisplay(props) {
 	function handleMouseEnter() {
 		anime({
-			targets: ".opacity-display .el",
+			targets: `.${styles.square}`,
 			scale: [
-				{ value: 0.7, easing: "easeOutSine", duration: 100 },
-				{ value: 1, easing: "easeInOutQuad", duration: 100 },
+				{ value: 1.2, easing: "easeOutSine", duration: 200 },
+				{ value: 1, easing: "easeInOutQuad", duration: 200 },
+				{ value: 1.3, easing: "easeOutSine", duration: 200 },
+				{ value: 1, easing: "easeInOutQuad", duration: 200 },
 			],
 			delay: anime.stagger(50, { grid: [10, 10], from: "center" }),
 		});
 		return anime;
 	}
-	
-	const squares = Math.round(props.squares / 4);
-	const testarr = [];
-	const opacity = ["10", "25", "45", "75", "100"];
-	
-	for (let i = 0; i < opacity.length; i++) {
-		for (let j = 0; j < squares; j++) {
-			testarr.push(`small square el squareOp-${opacity[i]}`);
+
+	const { primaryColor, accentColor } = useContext(Context);
+	const squaresPerColor = Math.round(props.squares / props.colors);
+	const mixHexAll = [];
+	const hex = []
+
+	for (let i = 1; i < props.colors + 1; i++) {
+		for (let j = 0; j < squaresPerColor; j++) {
+			mixHexAll.push(chroma.mix(primaryColor, accentColor, (1 / props.colors) * i).hex());
 		}
+		hex.push(chroma.mix(primaryColor, accentColor, (1 / props.colors) * i).hex())
 	}
 
 	return (
-		<div className="opacity-display" onMouseEnter={handleMouseEnter}>
-			{testarr.map((test, index) => (
-				<div key={index} className={test}></div>
-			))}
+		<div className={styles.grid} onMouseEnter={handleMouseEnter}>
+			<div className={styles.hex} style={{gridTemplateRows: `repeat(${props.colors}, 1fr)`}}>
+			{hex.map((hex, index) => (
+					<p key={index} className={styles.hex__p}>{hex}</p>
+				))}
+			</div>
+				{mixHexAll.map((hex, index) => (
+					<div
+						key={index}
+						className={styles.square}
+						style={{ backgroundColor: hex }}
+					></div>
+				))}
 		</div>
 	);
 }
