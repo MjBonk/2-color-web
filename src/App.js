@@ -24,14 +24,12 @@ function App() {
 	//disable scrolling on phone and scroll 1px for safari to hide searchbar
 	useDisableTouchScroll();
 	//For iPhone and Andriod To remove Address bar when viewing website on Safari Mobile
-	if (Browser.Platform.ios || (Browser.Platform.android && Browser.safari)) {
-		window.addEventListener("load", function () {
-			setTimeout(function () {
-				// Safari hides the address bar when scrollling!
-				window.scrollTo(0, 1);
-			}, 100);
-		});
-	}
+	window.addEventListener("load", function () {
+		setTimeout(function () {
+			// Safari hides the address bar when scrollling!
+			window.scrollTo(0, 1);
+		}, 100);
+	});
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
